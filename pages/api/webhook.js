@@ -27,7 +27,8 @@ export default async function handler(req, res) {
     // Verificar se é um evento de pagamento completado
     if (event.event === 'OPENPIX:CHARGE_COMPLETED') {
       if (event.data?.customer?.email) {
-        await sendProductEmail(event.data.customer.email);
+        const customerName = event.data.customer.name || '';
+        await sendProductEmail(event.data.customer.email, customerName);
       }
     }
 

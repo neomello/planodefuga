@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
+const PagamentoCartao = dynamic(() => import('../src/components/PagamentoCartao'), { ssr: false });
 
 export default function CheckoutPage() {
   return (
@@ -22,7 +24,12 @@ export default function CheckoutPage() {
             <img src="/img/botton.png" alt="Pagar Plano de Fuga" className="mx-auto w-60 rounded-lg" />
           </a>
         </div>
-        
+
+        {/* Cartão de Crédito */}
+        <div className="mb-8">
+          <PagamentoCartao />
+        </div>
+
         <div className="bg-yellow-400/10 text-yellow-400 font-semibold text-lg rounded-xl px-6 py-4 mb-8 border border-yellow-400/30 shadow">
         Após o pagamento você será redirecionado para a página de confirmação. E PDF do Plano de Fuga chegará também no seu e-mail.
         </div>

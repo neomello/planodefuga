@@ -1,0 +1,13 @@
+{
+  "projects": {},
+  "targets": {
+    "ikigai-webapp": {
+      "hosting": {
+        "production": [
+          "ikigai-webapp"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
