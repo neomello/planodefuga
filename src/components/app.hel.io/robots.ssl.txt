@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /paylink
-Disallow: /invoice
-Disallow: /claim
-Disallow: /auth
-Disallow: /settings
-Disallow: /dashboard
-Disallow: /charge

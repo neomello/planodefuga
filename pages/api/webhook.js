@@ -24,15 +24,27 @@ export default async function handler(req, res) {
     const rawBody = await buffer(req);
     const event = JSON.parse(rawBody.toString());
 
-    // Verificar se é um evento de pagamento completado
-    if (event.event === 'OPENPIX:CHARGE_COMPLETED') {
-      if (event.data?.customer?.email) {
-        const customerName = event.data.customer.name || '';
-        await sendProductEmail(event.data.customer.email, customerName);
-      }
+    // Log seguro apenas em desenvolvimento
+    if (process.env.NODE_ENV === 'development') {
+      console.log(JSON.stringify(event, null, 2));
     }
 
-    return res.status(200).json({ received: true });
+    // Validação extra do evento
+    if (
+      event.event !== 'OPENPIX:CHARGE_COMPLETED' ||
+      event.data?.charge?.status !== 'COMPLETED'
+    ) {
+      return res.status(400).json({ error: 'Evento inválido ou pagamento incompleto' });
+    }
+
+    // Enviar e-mail se houver cliente
+    if (event.data?.customer?.email) {
+      const customerName = event.data.customer.name || '';
+      await sendProductEmail(event.data.customer.email, customerName);
+    }
+
+    // Confirmação explícita ao cliente
+    return res.status(200).json({ message: 'Webhook processado com sucesso' });
   } catch (error) {
     if (process.env.NODE_ENV === 'development') {
       console.error('Erro no webhook:', error.message);

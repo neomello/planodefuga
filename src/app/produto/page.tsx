@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { HelioCheckout } from '../../components/HelioCheckout';
 import Footer from '../../../components/Footer';
 import Link from 'next/link';
 
@@ -31,22 +30,22 @@ export default function ProdutoPage() {
               <li>🚀 Dá o primeiro passo para alinhar vida com ação</li>
             </ul>
             <div className="flex items-center gap-4 mb-4">
-              <span className="text-yellow-400 text-3xl font-bold">R$29,90</span>
+              <span className="text-yellow-400 text-3xl font-bold">R$27,00</span>
             </div>
             
             {/* Botões de pagamento */}
             <div className="space-y-4">
-              <button
-                onClick={handleCompraPix}
-                disabled={loading}
-                className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors disabled:opacity-50"
-              >
-                {loading ? 'Processando...' : 'Pagar com Pix'}
-              </button>
-
-              <Link href="/pagamentocartao" className="w-full" legacyBehavior>
+              <Link href="/pagamentopix" className="w-full">
                 <button
-                  className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg transition-colors shadow-lg hover:shadow-yellow-400/40"
+                  className="w-full bg-purple-700 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-lg transition-colors disabled:opacity-50 shadow-lg hover:shadow-purple-400/20"
+                >
+                  Pagar com Pix
+                </button>
+              </Link>
+
+              <Link href="/pagamentocartao" className="w-full">
+                <button
+                  className="w-full bg-zinc-800 hover:bg-zinc-600 text-white font-bold py-3 px-6 rounded-lg transition-colors shadow-lg hover:shadow-zinc-400/20"
                 >
                   Pagar com Cartão de Crédito
                 </button>
@@ -75,21 +74,6 @@ export default function ProdutoPage() {
           <blockquote className="italic text-yellow-400">"Finalmente alguém escreveu o que eu sentia."</blockquote>
           <blockquote className="italic text-yellow-400">"R$29,90 que valeram por uma terapia."</blockquote>
         </div>
-      </section>
-      {/* CTA Final */}
-      <section className="bg-yellow-400 text-black py-10 px-6 text-center">
-        <h2 className="text-2xl font-bold mb-2">Sua liberdade começa agora.</h2>
-        <p className="mb-4">R$29,90 no Pix. Após a confirmação, enviaremos o PDF para seu e-mail.</p>
-        <Link
-          href="https://openpix.com.br/pay/45c7b3c0-05a8-4b29-a707-20677e496715"
-          className="inline-block bg-transparent rounded-lg font-bold hover:scale-105 transition-transform"
-          legacyBehavior>
-          <img
-            src="/img/acessar_plano_livro.png"
-            alt="Acessar Plano de Fuga"
-            className="w-64 md:w-80 mx-auto"
-          />
-        </Link>
       </section>
       <Footer />
     </main>
