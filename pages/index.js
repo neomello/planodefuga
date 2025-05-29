@@ -237,7 +237,7 @@ export default function Home() {
 
             {/* Botão extra antes do Footer */}
             <div className="flex justify-center my-10">
-                <Link href="/produto">
+                <Link href="/produto" legacyBehavior>
                     <div className="inline-block text-black px-10 py-1 rounded-lg font-bold group relative">
                         <div className="absolute -inset-1 bg-yellow-800/30 rounded-lg blur-lg group-hover:bg-yellow-500/50 transition-all duration-300"></div>
                         <div className="relative">

@@ -44,7 +44,7 @@ export default function ProdutoPage() {
                 {loading ? 'Processando...' : 'Pagar com Pix'}
               </button>
 
-              <Link href="/pagamentocartao" className="w-full">
+              <Link href="/pagamentocartao" className="w-full" legacyBehavior>
                 <button
                   className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg transition-colors shadow-lg hover:shadow-yellow-400/40"
                 >
@@ -58,7 +58,6 @@ export default function ProdutoPage() {
           </div>
         </div>
       </section>
-
       {/* Seção Autor */}
       <section className="bg-gray-900 py-16 px-6 text-center">
         <div className="inline-block bg-black/80 border border-yellow-400/40 rounded-2xl p-8 shadow-lg">
@@ -68,7 +67,6 @@ export default function ProdutoPage() {
           <span className="text-yellow-400 font-mono">"A fuga começa quando você decide agir."</span>
         </div>
       </section>
-
       {/* Seção Depoimentos */}
       <section className="py-16 px-6 text-center">
         <h2 className="text-2xl font-bold mb-6">O que estão dizendo:</h2>
@@ -78,7 +76,6 @@ export default function ProdutoPage() {
           <blockquote className="italic text-yellow-400">"R$29,90 que valeram por uma terapia."</blockquote>
         </div>
       </section>
-
       {/* CTA Final */}
       <section className="bg-yellow-400 text-black py-10 px-6 text-center">
         <h2 className="text-2xl font-bold mb-2">Sua liberdade começa agora.</h2>
@@ -86,7 +83,7 @@ export default function ProdutoPage() {
         <Link
           href="https://openpix.com.br/pay/45c7b3c0-05a8-4b29-a707-20677e496715"
           className="inline-block bg-transparent rounded-lg font-bold hover:scale-105 transition-transform"
-        >
+          legacyBehavior>
           <img
             src="/img/acessar_plano_livro.png"
             alt="Acessar Plano de Fuga"
@@ -94,7 +91,6 @@ export default function ProdutoPage() {
           />
         </Link>
       </section>
-
       <Footer />
     </main>
   );
