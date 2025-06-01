@@ -12,7 +12,7 @@ function PoliticaDePrivacidade() {
           Seus dados não são compartilhados com terceiros, salvo em situações estritamente necessárias, como intermediação de pagamentos via <strong>OpenPix</strong> ou cumprimento de obrigações legais.
         </p>
         <p className="mb-4">
-          O uso contínuo deste site implica na aceitação desta política. Caso tenha dúvidas ou queira solicitar a exclusão dos seus dados, entre em contato através do e-mail: <a href="mailto:contato@seudominio.com" className="text-yellow-400 underline">contato@seudominio.com</a>.
+          O uso contínuo deste site implica na aceitação desta política. Caso tenha dúvidas ou queira solicitar a exclusão dos seus dados, entre em contato através do e-mail: <a href="planodefugaikigai@gmail.com" className="text-yellow-400 underline">planodefugaikigai@gmail.com          om</a>.
         </p>
         <p className="text-sm text-gray-400 mt-6">Última atualização: Maio de 2025</p>
       </div>

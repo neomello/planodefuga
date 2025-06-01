@@ -65,7 +65,7 @@ export default function PagamentoPix() {
           <button
             onClick={handlePagamento}
             disabled={loading || !email || !nome}
-            className="bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-600 transition disabled:opacity-50 w-full"
+            className="w-full bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-bold transition disabled:opacity-50 w-full shadow-lg shadow-blue-500/50 hover:shadow-blue-400/50 !important"
           >
             {loading ? "Gerando QR Code..." : "Gerar QR Code Pix"}
           </button>

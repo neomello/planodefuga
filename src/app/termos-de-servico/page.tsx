@@ -15,7 +15,7 @@ function TermosDeServico() {
         Reservamo-nos o direito de alterar estes termos a qualquer momento, sem aviso prévio. O uso contínuo do site após alterações implica concordância com os novos termos.
       </p>
       <p className="mb-2">
-        Em caso de dúvidas, entre em contato pelo e-mail: contato@seudominio.com
+        Em caso de dúvidas, entre em contato pelo e-mail: planodefugaikigai@gmail.com
       </p>
     </div>
   );

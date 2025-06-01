@@ -87,7 +87,7 @@ export default function PagamentoCartao() {
         <button
           onClick={handlePagamento}
           disabled={loading || !email || !nome}
-          className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition disabled:opacity-50 w-full"
+          className="bg-purple-600 hover:bg-purple-500 text-white px-6 py-3 rounded-lg font-bold transition disabled:opacity-50 w-full shadow-lg shadow-purple-500/50 hover:shadow-purple-400/50"
         >
           {loading ? 'Redirecionando...' : 'Pagar com Cartão'}
         </button>
